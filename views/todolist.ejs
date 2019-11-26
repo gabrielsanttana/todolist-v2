@@ -4,7 +4,7 @@
     <h1><%= listTitle %></h1>
   </div>
 
-  <!-- Each item of the list with a checkbox -->
+  <!-- Generating each item of the list with a checkbox -->
   <div class="box">
     <% items.forEach(function(singleItem) { %>
       <form action="/delete" method="POST">
@@ -16,7 +16,7 @@
       </form>
     <% }); %>
 
-    <!-- //"Add" button -->
+    <!-- //Generating the "add" button -->
     <form class="item" action="/" method="POST">
       <input type="text" name="newItem" placeholder="New item" autocomplete="off">
       <button type="submit" name="list" value="<%= listTitle %>">+</button>

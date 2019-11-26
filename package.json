@@ -2,7 +2,7 @@
   "name": "todolist-v1",
   "version": "1.0.0",
   "description": "A to-do list web application with Node and EJS",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
