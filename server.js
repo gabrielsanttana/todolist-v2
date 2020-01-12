@@ -1,13 +1,12 @@
-//jshint esversion: 6
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+require("dotenv").config();
 
 const app = express();
 
-mongoose.connect("mongodb+srv://admin-gabriel:gatinho3@cluster0-lfmbb.mongodb.net/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(`mongodb+srv://admin-gabriel:${process.env.KEY}@cluster0-lfmbb.mongodb.net/todolistDB`, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
 const itemSchema = {
   name: String
@@ -76,8 +75,7 @@ app.get("/:listName", (req, res) => {
 });
 
 app.post("/", function(req, res) {
-  const itemName = req.body.newItem;
-  const listName = req.body.list; 
+  const { newItem: itemName, list: listName } = req.body;
 
   if(itemName != "") {
     const item = new Item({
@@ -115,8 +113,7 @@ app.post("/", function(req, res) {
 });
 
 app.post("/delete", (req, res) => {
-  const idToDelete = req.body.checkbox;
-  const listName = req.body.listName;
+  const { checkbox: idToDelete, listName } = req.body;
 
   if(listName === "Today") {
     Item.findByIdAndDelete(idToDelete, (err) => {
@@ -144,5 +141,5 @@ if(port == null || port == "") {
 }
 
 app.listen(port, function() {
-  console.log("Server is running successfully");
+  console.log(`Server is running on port ${port}`);
 }); 

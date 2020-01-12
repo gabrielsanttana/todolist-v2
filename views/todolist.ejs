@@ -1,4 +1,4 @@
-<%- include("header") -%>
+<%- include("partials/header") -%>
 
   <div class="box" id="heading">
     <h1><%= listTitle %></h1>
@@ -16,11 +16,10 @@
       </form>
     <% }); %>
 
-    <!-- //Generating the "add" button -->
     <form class="item" action="/" method="POST">
       <input type="text" name="newItem" placeholder="New item" autocomplete="off">
       <button type="submit" name="list" value="<%= listTitle %>">+</button>
     </form>
   </div>
 
-<%- include("footer") -%>
+<%- include("partials/footer") -%>
