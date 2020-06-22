@@ -6,7 +6,11 @@ require("dotenv").config();
 
 const app = express();
 
-mongoose.connect(`mongodb+srv://admin-gabriel:${process.env.KEY}@cluster0-lfmbb.mongodb.net/todolistDB`, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_ATLAS_URL}`, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+});
 
 const itemSchema = {
   name: String
