@@ -1,6 +1,6 @@
 # <div align="center">📋 Todolist-v2</div>
 
-<p align="center">A updated version of the to-do list application built with Node.js, EJS, MongoDB</p>
+<p align="center">An updated version of the simple to-do list application built with MongoDB</p>
 <p align="center"><a href="https://gabriel-todolist.herokuapp.com">Deployed version</a></p>
 
 ## 💻 Sample
