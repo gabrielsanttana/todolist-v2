@@ -47,6 +47,7 @@ mongoose.connect(`mongodb+srv....`);
 ```
 
 Then:
+```
 $ cd todolist-v2
 $ npm install
 $ node server.js
