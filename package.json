@@ -4,7 +4,7 @@
   "description": "A to-do list web application with Node and EJS",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "Gabriel Santana",
   "license": "ISC",

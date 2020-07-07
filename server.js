@@ -6,7 +6,7 @@ require("dotenv").config();
 
 const app = express();
 
-mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_ATLAS_URL}`, {
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER_URL}/todolistDB`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false

@@ -32,7 +32,9 @@
 $ git clone https://github.com/gabrielsanttana/todolist-v2
 ```
 
-Before running the project, it's necessary to have a database setup on a MongoDB Atlas Cluster. With that, create a .env file in the project root and put these keys in environment variables and they'll work on the mongoose connection string:
+Before running the project, it's necessary to have a database setup on a MongoDB Atlas Cluster. With that, create a `.env` file in the backend folder root and put these keys in environment variables and they'll work on the mongoose connection string. 
+
+Example:
 
 ```
 MONGODB_USERNAME=your_username
@@ -40,17 +42,18 @@ MONGODB_PASSWORD=your_password
 MONGODB_CLUSTER_URL=your_cluster_url
 ```
 
-If you prefer, just place your connection string on the server.js file:
+If you prefer, you can just place your connection string on the `server.js` file:
 
 ```
 mongoose.connect(`mongodb+srv...`);
 ```
 
 Then:
+
 ```
 $ cd todolist-v2
 $ npm install
-$ node server.js
+$ npm start
 ```
 
 The application will pop-up in the browser on http://localhost:3000
